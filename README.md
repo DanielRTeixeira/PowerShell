@@ -1,2 +1,1 @@
-# PowerBot
-PowerShell Gmail Backdoor
+# Simple Scripts
