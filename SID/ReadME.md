@@ -13,4 +13,4 @@ S         | Indicates that the string is a SID | S
 R         | Revision level     | 1     
 X         | Identifier authority value | 5 (NT Authority)
 ￼￼￼Y1-Y2-Yn-1| Domain identifier | 21-312345612-1256085132-1900709958
-Yn        | RID               | 500
+Yn        | RID  (Relative ID) | 500
