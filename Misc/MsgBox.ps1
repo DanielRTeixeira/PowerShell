@@ -1,4 +1,4 @@
-function MsgBox ($msg) {
+function MsgBox ($msg, $title) {
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
-[System.Windows.Forms.Messagebox]::Show("$msg"), [Windows.Forms.MessageBoxIcon]::Error)
+[Windows.Forms.MessageBox]::Show("$msg", "$title", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Error)
 }
